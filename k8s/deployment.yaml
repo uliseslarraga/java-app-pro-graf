@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: java-app
+  labels:
+    app: demo-k8s
+  name: demo-k8s
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo-k8s
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: demo-k8s
+    spec:
+      containers:
+      - image: uliseslarraga/internal-lab:demo-k8s
+        name: demo-k8s
+      imagePullSecrets:
+      - name: regcred
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: java-app
+  labels:
+    app: demo-k8s
+  name: demo-k8s
+spec:
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: demo-k8s
