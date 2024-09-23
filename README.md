@@ -3,6 +3,6 @@
 - Set up Prometheus and Grafana 
 - Import a simple dashboard to monitor health status of an Spring boot App
 
-| First Header  | Second Header |
+| Item  | Result |
 | ------------- | ------------- |
 | Sample Dashboard  | ![dashboard](./doc/img/image.png) |
