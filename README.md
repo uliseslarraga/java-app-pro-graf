@@ -5,4 +5,4 @@
 
 | First Header  | Second Header |
 | ------------- | ------------- |
-| Sample Dashboard  | ![dashboard](./doc/img/image.jpg) |
+| Sample Dashboard  | ![dashboard](./doc/img/image.png) |
